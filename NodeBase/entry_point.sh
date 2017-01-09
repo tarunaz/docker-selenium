@@ -5,12 +5,12 @@ source /opt/bin/functions.sh
 
 export GEOMETRY="$SCREEN_WIDTH""x""$SCREEN_HEIGHT""x""$SCREEN_DEPTH"
 
-echo "DEBUG - sleeping for 3 mins"
+echo DEBUG - sleeping for 3 mins 1>&2
 sleep 180
 
 if [ ! -e /opt/selenium/config.json ]; then
   echo No Selenium Node configuration file, the node-base image is not intended to be run directly. 1>&2
-  exit 1
+  #exit 1
 fi
 
 if [ -z "$HUB_PORT_4444_TCP_ADDR" ]; then

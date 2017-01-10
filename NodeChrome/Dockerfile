@@ -46,9 +46,9 @@ ENV NODE_MAX_SESSION 1
 ENV NODE_REGISTER_CYCLE 5000
 ENV NODE_PORT 5555
 COPY generate_config /opt/selenium/generate_config
-RUN chmod +x /opt/selenium/generate_config
-  && touch /opt/selenium/config.json
-  && chmod +x /opt/selenium/config.json
+RUN chmod +x /opt/selenium/generate_config \
+  && touch /opt/selenium/config.json \
+  && chmod 666 /opt/selenium/config.json
 
 #=================================
 # Chrome Launch Script Modication

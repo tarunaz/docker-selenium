@@ -2,7 +2,7 @@
 # NOTE: DO *NOT* EDIT THIS FILE.  IT IS GENERATED.
 # PLEASE UPDATE Dockerfile.txt INSTEAD OF THIS FILE
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-FROM 172.30.238.118:5000/selenium/selenium-node-base
+FROM registry.tke.openshift.com/selenium/selenium-node-base
 MAINTAINER Selenium <selenium-developers@googlegroups.com>
 
 USER root

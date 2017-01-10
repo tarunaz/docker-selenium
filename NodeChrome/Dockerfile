@@ -2,7 +2,7 @@
 # NOTE: DO *NOT* EDIT THIS FILE.  IT IS GENERATED.
 # PLEASE UPDATE Dockerfile.txt INSTEAD OF THIS FILE
 # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-FROM registry.tke.openshift.com/selenium/selenium-node-base
+FROM selenium/node-base:3.0.1-dysprosium
 MAINTAINER Selenium <selenium-developers@googlegroups.com>
 
 USER root

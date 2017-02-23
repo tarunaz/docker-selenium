@@ -26,8 +26,7 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
     ${CHROME_VERSION:-google-chrome-stable} \
   && rm /etc/apt/sources.list.d/google-chrome.list \
   && rm -rf /var/lib/apt/lists/* /var/cache/apt/* \
-  && echo "none      /dev/shm        tmpfs   defaults,size=1G        0 0" > /etc/fstab \
-  && mount -o remount /dev/shm
+  && echo "none      /dev/shm        tmpfs   defaults,size=1G        0 0" > /etc/fstab
 #  && blockdev --setrw /dev/shm \
 #  && mount -o size=1G /dev/shm
 

@@ -29,7 +29,7 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
   && echo "shm      /dev/shm        tmpfs   defaults,size=1G        0 0" > /etc/fstab \
 #  && blockdev --setrw /dev/shm \
   # && mount -o remount /dev/shm \
-  && mount -v shm:/dev/shm
+  && mount -v /dev/shm
 
 #==================
 # Chrome webdriver

@@ -25,9 +25,7 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
   && apt-get -qqy install \
     ${CHROME_VERSION:-google-chrome-stable} \
   && rm /etc/apt/sources.list.d/google-chrome.list \
-  && rm -rf /var/lib/apt/lists/* /var/cache/apt/* \
-  && echo "tmpfs /dev/shm tmpfs defaults,size=512m 0 0" > /etc/fstab \
-  && mount -o remount /dev/shm
+  && rm -rf /var/lib/apt/lists/* /var/cache/apt/*
 
 #==================
 # Chrome webdriver

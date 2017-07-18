@@ -18,8 +18,8 @@ USER root
 #       google-chrome-beta  (pull latest beta)
 #============================================
 
-#ARG CHROME_VERSION="google-chrome-stable"
-ARG CHROME_VERSION="58.0.3029.110-1"
+ARG CHROME_VERSION="google-chrome-stable"
+#ARG CHROME_VERSION="58.0.3029.110-1"
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
   && echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list \
   && apt-get update -qqy \

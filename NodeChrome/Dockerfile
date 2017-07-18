@@ -26,6 +26,8 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
   && apt-get -qqy install \
     ${CHROME_VERSION:-google-chrome-stable} 
 
+RUN cat /etc/apt/sources.list.d/google-chrome.list 
+
 #==================
 # Chrome webdriver
 #==================

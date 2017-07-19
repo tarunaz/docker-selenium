@@ -26,8 +26,10 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
   && echo "deb http://archive.ubuntu.com/ubuntu xenial-updates main universe\n" >> /etc/apt/sources.list \
   && apt-get update -qqy \
   && sudo sed -i -re 's/([a-z]{2}\.)?us.archive.ubuntu.com|security.ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list \
-  && sudo apt-get update \
+  && sudo apt-get update -qqy \
   && sudo apt-get dist-upgrade \
+  && sudo apt-get install update-manager-core \
+  && sudo do-release-upgrade \
   && wget http://security.ubuntu.com/ubuntu/pool/universe/c/chromium-browser/chromium-browser_57.0.2987.98-0ubuntu1.1348_amd64.deb \
   && sudo dpkg -i chromium-browser_57.0.2987.98-0ubuntu1.1348_amd64.deb
     

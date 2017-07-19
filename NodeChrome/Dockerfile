@@ -24,8 +24,8 @@ ARG CHROME_VERSION="chromium-browser"
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
   && echo "deb http://dl.google.com/linux/chrome/deb/ trusty main" >> /etc/apt/sources.list.d/google-chrome.list \
   && apt-get update -qqy \
-  && apt-get -qqy install \
-    ${CHROME_VERSION:-google-chrome-stable} 
+  && wget http://security.ubuntu.com/ubuntu/pool/universe/c/chromium-browser/chromium-browser_57.0.2987.98-0ubuntu1.1348_amd64.deb \
+  && sudo dpkg -i chromium-browser_57.0.2987.98-0ubuntu1.1348_amd64.deb
     
 #==================
 # Chrome webdriver

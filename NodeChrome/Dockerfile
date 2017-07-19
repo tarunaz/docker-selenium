@@ -18,11 +18,11 @@ USER root
 #       google-chrome-beta  (pull latest beta)
 #============================================
 
-ARG CHROME_VERSION="google-chrome-stable"
+#ARG CHROME_VERSION="google-chrome-stable"
 #ARG CHROME_VERSION="58.0.3029.110-1"
-ARG CHROME_VERSION="chromium-browser"
+#ARG CHROME_VERSION="chromium-browser"
 RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add - \
-  && echo "deb http://dl.google.com/linux/chrome/deb/ trusty main" >> /etc/apt/sources.list.d/google-chrome.list \
+  && echo "deb http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google-chrome.list \
   && apt-get update -qqy \
   && wget http://security.ubuntu.com/ubuntu/pool/universe/c/chromium-browser/chromium-browser_57.0.2987.98-0ubuntu1.1348_amd64.deb \
   && sudo dpkg -i chromium-browser_57.0.2987.98-0ubuntu1.1348_amd64.deb

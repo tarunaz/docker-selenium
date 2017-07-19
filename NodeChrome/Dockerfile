@@ -29,7 +29,7 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
   && sudo apt-get update -qqy \
   && sudo apt-get dist-upgrade -qqy \
   && sudo apt-get install update-manager-core -qqy \
-  && sudo do-release-upgrade -qqy \
+  && sudo do-release-upgrade \
   && wget http://security.ubuntu.com/ubuntu/pool/universe/c/chromium-browser/chromium-browser_57.0.2987.98-0ubuntu1.1348_amd64.deb \
   && sudo dpkg -i chromium-browser_57.0.2987.98-0ubuntu1.1348_amd64.deb
     

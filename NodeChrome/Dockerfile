@@ -31,9 +31,9 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
   && sudo apt-get install -y gconf-service libasound2 libatk1.0-0 libatomic1 libcairo2 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk2.0-0 \
   && sudo apt-get install -y libxss1 xdg-utils \
   && wget http://security.ubuntu.com/ubuntu/pool/universe/c/chromium-browser/chromium-codecs-ffmpeg_57.0.2987.98-0ubuntu1.1348_amd64.deb \
-  && sudo dpkg -i chromium-codecs-ffmpeg_57.0.2987.98-0ubuntu1.1348_amd64.deb
+  && sudo dpkg -i chromium-codecs-ffmpeg_57.0.2987.98-0ubuntu1.1348_amd64.deb \
   && wget http://security.ubuntu.com/ubuntu/pool/universe/c/chromium-browser/chromium-codecs-ffmpeg-extra_57.0.2987.98-0ubuntu1.1348_amd64.deb \
-  && sudo dpkg -i chromium-codecs-ffmpeg-extra_57.0.2987.98-0ubuntu1.1348_amd64.deb
+  && sudo dpkg -i chromium-codecs-ffmpeg-extra_57.0.2987.98-0ubuntu1.1348_amd64.deb \
   && wget http://security.ubuntu.com/ubuntu/pool/universe/c/chromium-browser/chromium-browser_57.0.2987.98-0ubuntu1.1348_amd64.deb \
   && sudo dpkg -i chromium-browser_57.0.2987.98-0ubuntu1.1348_amd64.deb
     

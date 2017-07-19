@@ -28,6 +28,7 @@ RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key
   && sudo sed -i -re 's/([a-z]{2}\.)?us.archive.ubuntu.com|security.ubuntu.com/old-releases.ubuntu.com/g' /etc/apt/sources.list \
   && sudo apt-get update -qqy \
   && sudo apt-get dist-upgrade -qqy \
+  && sudo apt-get install gconf-service libasound2 libatk1.0-0 libatomic1 libcairo2 libgconf-2-4 libgdk-pixbuf2.0-0 libglib2.0-0 libgtk2.0-0 \
   && wget http://security.ubuntu.com/ubuntu/pool/universe/c/chromium-browser/chromium-browser_57.0.2987.98-0ubuntu1.1348_amd64.deb \
   && sudo dpkg -i chromium-browser_57.0.2987.98-0ubuntu1.1348_amd64.deb
     
